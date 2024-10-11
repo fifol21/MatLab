@@ -1,7 +1,5 @@
 clear all; 
 close all;
-clear all;
-close all;
 
 
 single_min = realmin("single"),
