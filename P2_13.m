@@ -1,8 +1,8 @@
 clear all;
 close all;
 
-a= 3;
-b = 2985454;
+a= 2;
+b = 269979891,
 c = 1;
 
 delta = sqrt(b^2 -4*a*c),
@@ -17,6 +17,3 @@ end
 
     X2 = c/(a*X1),
     X1,
-
-
-

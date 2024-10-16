@@ -1,5 +1,6 @@
 clear all;
 close all;
+clc;
 
 a=fi( 11.25,0,8,4), a.bin,
 b=fi( 4.75,0,8,4), b.bin,

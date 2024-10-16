@@ -35,15 +35,13 @@ if sing_bit == '1'
 else 
     sign = 1; % gdy bedzie 0 
 end
-   exponent =bin2dec(exp_bit) -127;
+   exponent =bin2dec(exp_bit) -127; 
 fraction = 1.0;
 for i=1:length(fract_bit)
-    fraction =  fraction + str2double(fract_bit(i))*2^(-i);
+    fraction =  fraction + str2double(fract_bit(i))*2^(-i); % konwertuje pojedynczy element str na double
 end
 
 real_val = sign * fraction * 2^exponent; 
 
 end
 wwynik = bin2num(c),
-
-
