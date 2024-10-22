@@ -15,7 +15,7 @@ A_z = [cos(gamma),-sin(gamma),0 ; sin(gamma),cos(gamma),0;0,0,1];
 
 A3D = A_x * A_y * A_z;
 
-P3D_out = A3D * data';
+P3D_out = (A3D * data')';
 
 figure;
 plot3(data(:,1),data(:,2),data(:,3),'b');
