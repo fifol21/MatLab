@@ -7,7 +7,7 @@ figure; plot( x, y, 'b*' ); title('y=f(x)'); grid; pause
 
 % Aproksymacja linia prosta: y = a * x + b
 if(1)               
-  xt = x'; yt = y'; N = length( xt );            % zamiana na kolumny     %    X      *   ab
+  xt = x'; yt = y'; N = length( xt );            % zamiana na kolumny  zeby mozna bylo policzyc 
   X = [ xt, ones(N,1) ];    % macierz sklada sie z x i 1 ( dla wyrazu wolnego b)     
   ab = X \ yt;           % rozklad macierzy na a i b i przypisywanie ich               
   a = ab(1), b = ab(2),       
@@ -20,5 +20,5 @@ else
   b = ym - a * xm;              
 end
 figure; plot( x, y, 'b*', x, a*x+b, 'k-' ); title('y=f(x)'); grid; pause
-p = polyfit( x, y, 3),        
+p = polyfit( x, y, 6),        % aproksymacja za pomoca wielomianow, wiekszy wielomian lepsze dopaswoanie
 figure; plot( x, y, 'b*', x, polyval(p,x), 'r-' ); title('y=f(x)'); grid; pause

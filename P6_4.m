@@ -18,7 +18,7 @@ X = toeplitz(c,r),
 pause    % macierz pobudzenia o strukturze Toeplitza
 
 y = X*h;         % wynik przejscia pobudzenia przez uklad h(n)
-SNR=0; y = awgn(y,SNR);    % dodanie szumu, tak aby otrzymac zadany SNR 
+SNR=50; y = awgn(y,SNR);    % dodanie szumu, tak aby otrzymac zadany SNR 
 
 he = X \ y;                      % to samo zoptymalizowane obliczeniowo
 plot(1:L,h,'ro',1:L,he,'bx'); title('Zadane i obliczone h(n)'); grid; 
